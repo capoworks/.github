@@ -1,8 +1,4 @@
-# Capoworks
-
-Open-source engine management firmware, derived from **[FOME](https://github.com/FOME-Tech/fome-fw)** and the original **[rusEFI](https://github.com/rusefi/rusefi)** project.
-
-Capoworks builds on [FOME](https://github.com/FOME-Tech/fome-fw) and [rusEFI](https://github.com/rusefi/rusefi), with a direction focused on **new features, experimental control strategies, and application-specific development**.
+Capoworks-ecu builds on [FOME](https://github.com/FOME-Tech/fome-fw) and [rusEFI](https://github.com/rusefi/rusefi), with a direction focused on **new features, experimental control strategies, and application-specific development**.
 
 The project provides a space to explore alternative fuel models, ignition scheduling, signal processing, and hardware integration, giving developers and tuners room to investigate ideas and adapt the firmware to specific engine requirements.
 
