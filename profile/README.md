@@ -44,6 +44,34 @@ Event-lifecycle handling and per-output software dwell limits improve control ac
 - **DC/ETB actuator handling:** inhibits outputs during configuration burns and invalid control conditions.
 - **Hardware and logging improvements:** Core8 error-LED routing, configurable MC33816 SPI, independent USB mass storage, and corrected MLG data offsets.
 
+## Supported Hardware and Processors
+
+Capoworks inherits board configurations and processor-port work from [FOME](https://github.com/FOME-Tech/fome-fw) and [rusEFI](https://github.com/rusefi/rusefi). Listed configurations require the exact board revision and matching build; supported features and validation vary.
+
+| Hardware group | Board configurations and sources |
+| --- | --- |
+| Core8 / Core48 | [Core8 config](https://github.com/capoworks/capoworks-ecu/tree/master/firmware/config/boards/core8), [Core48 config](https://github.com/capoworks/capoworks-ecu/tree/master/firmware/config/boards/core48) |
+| Atlas / Polygonus | [Atlas config](https://github.com/capoworks/capoworks-ecu/tree/master/firmware/config/boards/atlas), [Atlas hardware guide](https://wiki.fome.tech/Hardware/Brain-Boards/Atlas/FOME-Atlas/), [Polygonus Universal112 base](https://github.com/FOME-Tech/Polygonus-Universal-112). Atlas is a modular processor brain module that pairs with a base board; Polygonus Universal112 is one such base board. Each assembly needs its matching pinout and build. |
+| Proteus | [Proteus F4/F7/H7 configs](https://github.com/capoworks/capoworks-ecu/tree/master/firmware/config/boards/proteus), [hardware guide](https://wiki.fome.tech/Intro-Start-Here/Hardware-Running-FOME/) |
+| [microRusEFI](https://github.com/capoworks/capoworks-ecu/tree/master/firmware/config/boards/microrusefi) | [F4/F7 configs](https://github.com/capoworks/capoworks-ecu/tree/master/firmware/config/boards/microrusefi), [hardware guide](https://wiki.fome.tech/Intro-Start-Here/Hardware-Running-FOME/) |
+| Hellen / AlphaX | [Selected Hellen and AlphaX configurations](https://github.com/capoworks/capoworks-ecu/tree/master/firmware/config/boards/hellen), not all generations |
+| Frankenso | [Legacy Frankenso config](https://github.com/capoworks/capoworks-ecu/tree/master/firmware/config/boards/frankenso) |
+| Discovery / Nucleo | [F407 Discovery](https://github.com/capoworks/capoworks-ecu/tree/master/firmware/config/boards/f407-discovery), [F429 Nucleo](https://github.com/capoworks/capoworks-ecu/tree/master/firmware/config/boards/nucleo_f429), [F767 Nucleo](https://github.com/capoworks/capoworks-ecu/tree/master/firmware/config/boards/nucleo_f767), and [H743 Nucleo](https://github.com/capoworks/capoworks-ecu/tree/master/firmware/config/boards/nucleo_h743) development targets |
+
+| Processor family | Capoworks target class | Concrete target examples |
+| --- | --- | --- |
+| STM32F4 | Arm Cortex-M4 | F407 ([Discovery](https://github.com/capoworks/capoworks-ecu/tree/master/firmware/config/boards/f407-discovery)), F429 ([Nucleo](https://github.com/capoworks/capoworks-ecu/tree/master/firmware/config/boards/nucleo_f429), [Proteus F4](https://github.com/capoworks/capoworks-ecu/tree/master/firmware/config/boards/proteus)) |
+| STM32F7 | Arm Cortex-M7 | F767 ([Nucleo](https://github.com/capoworks/capoworks-ecu/tree/master/firmware/config/boards/nucleo_f767)) |
+| STM32H7 | Arm Cortex-M7 | H743 ([Atlas](https://github.com/capoworks/capoworks-ecu/tree/master/firmware/config/boards/atlas), [Nucleo](https://github.com/capoworks/capoworks-ecu/tree/master/firmware/config/boards/nucleo_h743)) |
+
+These targets follow the [firmware processor mapping](https://github.com/capoworks/capoworks-ecu/blob/master/firmware/rusefi.mk) and do not imply support for every chip, memory size, package, or pinout in a family.
+
+### Custom Hardware and Future Ports
+
+Custom carrier boards and OEM harness adapters are welcome development opportunities, together with tailored I/O, driver, and CAN support or additional MCU variants and families. Each needs board integration or HAL/driver porting, followed by appropriate bench and engine validation.
+
+Newer upstream [rusEFI](https://github.com/rusefi/rusefi) designs need individual assessment. Discovery and Nucleo development boards need appropriate power protection, signal conditioning, and actuator drivers. To discuss requirements early, open a [GitHub issue](https://github.com/capoworks/capoworks-ecu/issues/new) with the MCU, schematics, I/O counts, connectors, and peripheral requirements.
+
 ## Compatibility and Validation
 
 The feature set has been validated on a **Rotax V990**, as reported by the project owner. Hardware support remains specific to the board, wiring, trigger arrangement, and feature configuration.
