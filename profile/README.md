@@ -4,7 +4,7 @@ Capoworks ECU is an independent open-source engine-control project focused on **
 
 The project provides a place to explore fuel models, ignition scheduling, signal processing, and hardware integration, giving developers and tuners room to investigate ideas and adapt the firmware to specific engines. Experimental options are identified explicitly, with their operating requirements, limitations, and validation status documented.
 
-**[Firmware & Source Code](https://github.com/capoworks/capoworks-ecu) · [Wiki & Documentation](https://capoworks.github.io/capoworks-ecu-docs/)**
+**[Firmware & Source Code](https://github.com/capoworks/capoworks-ecu) · [Wiki & Documentation](https://capoworks.github.io/capoworks-ecu-docs/) · [Recent changes](https://capoworks.github.io/capoworks-ecu-docs/recent-changes/)**
 
 ## Tune Independently. Blend Freely.
 
