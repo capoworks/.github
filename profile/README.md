@@ -4,7 +4,11 @@ Capoworks ECU is an independent open-source engine-control project focused on **
 
 The project provides a place to explore fuel models, ignition scheduling, signal processing, and hardware integration, giving developers and tuners room to investigate ideas and adapt the firmware to specific engines. Experimental options are identified explicitly, with their operating requirements, limitations, and validation status documented.
 
-**[Firmware & Source Code](https://github.com/capoworks/capoworks-ecu) · [Wiki & Documentation](https://capoworks.github.io/capoworks-ecu-docs/) · [Recent changes](https://capoworks.github.io/capoworks-ecu-docs/recent-changes/)**
+**[On-Demand Firmware Builder](https://capoworks.undo.it/firmware) · [Firmware & Source Code](https://github.com/capoworks/capoworks-ecu) · [Wiki & Documentation](https://capoworks.github.io/capoworks-ecu-docs/) · [Recent changes](https://capoworks.github.io/capoworks-ecu-docs/recent-changes/)**
+
+## On-Demand Firmware Builder
+
+Use the [Capoworks on-demand firmware builder](https://capoworks.undo.it/firmware) to create a matching firmware image and TunerStudio INI without a local toolchain. Select a supported board, choose opt-in modules and table dimensions, then sign in or create an account to request the build. Once complete, download the firmware image and generated TunerStudio INI together. Each user can submit six build requests per day. See the [On-Demand Firmware Build documentation](https://capoworks.github.io/capoworks-ecu-docs/Software/On-Demand-Firmware-Build/) for details.
 
 ## Tune Independently. Blend Freely.
 
